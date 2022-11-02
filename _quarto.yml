@@ -1,0 +1,53 @@
+project:
+  type: book
+
+book:
+  title: "Tytuł pracy dyplomowej"
+  author: "Imię i nazwisko"
+  date: "2022"
+  language: "pl"
+  chapters:
+    - index.qmd
+    - chapter1.qmd
+    - chapter2.qmd
+    - chapter3.qmd    
+    - summary.qmd
+
+bibliography: references.bib
+csl: apa-7th-edition.csl
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: report
+    include-in-header: 
+      - tex/packages.tex
+    include-before-body: 
+      - tex/settings.tex
+      - tex/symbols.tex
+    number-sections: true
+    colorlinks: true
+    papersize: a4letter
+    fontsize: 12pt
+    keep-tex: true
+    lof: true
+    lot: true
+    toc-title: Spis treści
+    geometry:
+      - twoside=true
+      - left=3.0cm
+      - right=2.0cm 
+      - top=2.5cm
+      - bottom=2.5cm
+      - headsep=1.2cm
+    cite-method: biblatex
+    biblatexoptions: 
+      - style=authoryear
+      - backend=biber
+    biblio-style: apalike
+
+editor: visual
+
+tbl-cap-location: top
+
